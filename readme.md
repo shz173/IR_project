@@ -23,3 +23,5 @@ nltk
 
 whoosh
 
+requests
+
