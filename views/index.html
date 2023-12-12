@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Practice Leetcode everyday!</title>
+<!--   <script>
+  </script> -->
+  <style>
+    
+    body {
+/*       background-color: #FFEBCD; */
+      margin: 0;
+      display: flex;
+/*       align-items: center; */
+      justify-content: center;
+    }
+    h1 {
+      color: grey; 
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 36px;
+      text-align: center;
+    }
+    label {
+      color: grey; 
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 20px;
+    }
+    img {
+      width: 500px;
+    }
+    .image-container {
+      text-align: center;
+    } 
+    
+    @media(max-width: 768px){
+      img{
+        width: 350px
+      }
+    } 
+    
+    input[type="submit"] {
+      padding: 10px 25px;
+      background: #3498db; /* 背景色 */
+      color: #fff; /* 文字颜色 */
+      border: 0;
+      border-radius: 5px; /* 圆角 */
+      box-shadow: 0 5px #2980b9; /* 阴影效果 */
+      cursor: pointer;
+      outline: none; /* 去掉轮廓 */
+      transition: all 0.2s ease-in-out; /* 平滑过渡效果 */
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 15px;
+      padding: 5px 10px; /* 垂直方向和水平方向的内边距 */
+    }
+    
+    /* 按钮激活（点击）状态 */
+    input[type="submit"]:active {
+      box-shadow: 0 2px #367C39; /* 点击状态下的阴影效果 */
+      transform: translateY(3px); /* 模拟按钮被按下 */
+    }
+
+    /* 按钮悬停状态 */
+    input[type="submit"]:hover {
+      background-color: #45a049; /* 按钮悬停时的背景色 */
+    }
+    
+    
+  </style>
+    
+    
+  </head>
+
+  <body>
+    <div class="center">
+      <form method="POST" action="{{ url_for('test') }}"> 
+        <h1>Practice Leetcode everyday!</h1>
+        <div class="image-container">
+          <img src="https://cdn.cdo.mit.edu/wp-content/uploads/sites/67/2021/01/0_zuhXdNAIUoxEem4--768x512.png">
+          <br><img src="https://media.istockphoto.com/id/1166643289/vector/office-workers-are-made-up-of-parts-of-the-whole-working-on-the-project.jpg?s=612x612&w=0&k=20&c=XWbTm8wbj60kTFQiT0RCev7bIR8aiGlWni4v7Jo9-rU=">
+        </div><br>
+        <label for="input_text">Please input the question you want to search:</label><br>
+        <textarea id="input_text" name="input_text" rows="4" cols="50" required>{{ request.form.get('input_text', 'Two Sum') }}</textarea><br>
+        <div class="blur"><br>
+        <label for="topk">The top K related questions you need (1-5):</label>
+        <input type="number" id="topk" name="topk" min="1" max="5" value="1" required /><br>
+        <br>
+        <!-- <label for="method">Choose a search method:</label>
+        <select name="methods" id="met">
+          <option value="m1">method1</option>
+          <option value="m2">method2</option>
+        </select><br>
+        <br> -->
+        <label for="code">Choose a code language for the answer:</label>
+        <select name="languages" id="lang">
+          <option value="All">All</option>
+          <option value="C++">C++</option>
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="JavaScript">JavaScript</option>
+        </select><br>
+        <br>
+        <input type="submit" value="Submit"></div>
+      </form>
+    </div>
+  </body>
+</html>
